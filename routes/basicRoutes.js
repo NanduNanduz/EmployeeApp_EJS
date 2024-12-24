@@ -48,9 +48,21 @@ function employeeRoutes(nav){
   router.get('/form',(req,res)=>{
     res.render('employeeForm',{
       nav
-    })
-
+    });
   })
+
+  //Get Operation
+  router.get('/employees',(req,res)=>{
+    res.send(data);
+  });
+
+  //Post Operation
+  router.post('/add',(req, res)=>{
+    data.push(req.body);
+    res.redirect('/employee');
+  });
+
+
 
 
 

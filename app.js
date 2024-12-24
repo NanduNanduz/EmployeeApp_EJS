@@ -17,7 +17,6 @@ app.use("/employee", basicRoute);
 app.use(express.static("public")); // express use public folder as the root directory for serving static assets.
 
 
-
 app.listen(3000, () => {
   console.log("Server is running");
 }); // start listening for incoming requests on port 3000
