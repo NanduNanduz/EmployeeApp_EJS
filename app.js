@@ -3,9 +3,8 @@ const app = new express(); //instance of express
 
 const ejs = require("ejs"); //import ejs
 
-app.set("view engine", ejs); // set ejs as view engine
+app.set("view engine", 'ejs'); // set ejs as view engine
 app.set("views", __dirname + "/views");
-
 
 const navbar = [
   { link: "/employee", name: "Home" },
