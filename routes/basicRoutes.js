@@ -46,7 +46,7 @@ function employeeRoutes(nav){
 
   //Rendering employee form page
   router.get('/form',(req,res)=>{
-    res.render('/employeeForm',{
+    res.render('employeeForm',{
       nav
     })
 
