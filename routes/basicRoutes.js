@@ -37,11 +37,22 @@ function employeeRoutes(nav){
 
   //Rendering home page
   router.get("/", (req, res) => {
+    //use render to display in ejs
     res.render("home", {
       data,
       nav,
     });
   });
+
+  //Rendering employee form page
+  router.get('/form',(req,res)=>{
+    res.render('/employeeForm',{
+      nav
+    })
+
+  })
+
+
 
   return router; //for to access all crud operations
 }
