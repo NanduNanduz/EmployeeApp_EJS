@@ -62,16 +62,21 @@ function employeeRoutes(nav){
     res.redirect('/employee');
   });
 
+  //Update Operation
+  router.put('/edit/:id', (req,res)=>{
+    data.splice(req.params.id, 1, req.body);
+    res.send(data);
+  });
 
+  //Delete Operation
+  router.delete('/remove/:id', (req, res)=>{
+    data.pop();
+    res.send(data);
 
-
+  })
 
   return router; //for to access all crud operations
 }
-
-
-
-
 
 
 module.exports = employeeRoutes;
