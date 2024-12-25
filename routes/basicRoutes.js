@@ -79,4 +79,4 @@ function employeeRoutes(nav){
 }
 
 
-module.exports = employeeRoutes;
+module.exports = employeeRoutes; // function exported
