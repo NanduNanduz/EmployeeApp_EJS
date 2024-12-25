@@ -69,6 +69,64 @@
 
     </div>
 
+
+
+
+
+    <script>
+        // Add event listeners for "Update" buttons
+        document.querySelectorAll(".update-btn").forEach((button) => {
+            button.addEventListener("click", () => {
+                const id = button.getAttribute("data-id"); // Get employee ID
+
+                // Prompt the user for updated details
+                const updatedData = {
+                    name: prompt("Enter new name:"),
+                    designation: prompt("Enter new designation:"),
+                    location: prompt("Enter new location:"),
+                    salary: prompt("Enter new salary:"),
+                };
+
+                // Send PUT request to update employee
+                fetch(`/employee/edit/${id}`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(updatedData),
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        alert("Employee updated successfully!");
+                        location.reload(); // Refresh page to show updated data
+                    })
+                    .catch((error) => console.error("Error updating employee:", error));
+            });
+        });
+
+        // Add event listeners for "Delete" buttons
+        document.querySelectorAll(".delete-btn").forEach((button) => {
+            button.addEventListener("click", () => {
+                const id = button.getAttribute("data-id"); // Get employee ID
+
+                // Confirm before deleting
+                if (confirm("Are you sure you want to delete this employee?")) {
+                    // Send DELETE request to remove employee
+                    fetch(`/employee/remove/${id}`, {
+                        method: "DELETE",
+                    })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            alert("Employee deleted successfully!");
+                            location.reload(); // Refresh page to show updated data
+                        })
+                        .catch((error) => console.error("Error deleting employee:", error));
+                }
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
