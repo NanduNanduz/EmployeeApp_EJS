@@ -25,7 +25,30 @@ form{
     background-color:rgb(187, 144, 236);
     margin-left: 20%;
     margin-right: 20%;
- 
+}
+
+.update-btn{
+    background-color: rgb(200, 126, 236) !important;
+    border: 2px solid rgb(53, 32, 63) ;
+    border-radius: 20px;
+}
+.update-btn:hover{
+    background-color: rgb(200, 126, 236);
+    border: 2px solid rgb(53, 32, 63) ;
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+.delete-btn{
+    background-color:  rgb(89, 162, 211) ;
+    border: 2px solid rgb(25, 42, 54);
+    border-radius: 20px;
+}
+.delete-btn:hover{
+    background-color:  rgb(89, 162, 211) ;
+    border: 2px solid rgb(25, 42, 54);
+    border-radius: 20px;
+     transform: scale(1.1);
 
 }
+
 
