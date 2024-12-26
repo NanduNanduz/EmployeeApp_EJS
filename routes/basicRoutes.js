@@ -9,21 +9,21 @@ router.use(express.urlencoded({ extended: true }));
 var data = [
   {
     id: 1,
-    name: "Arun",
+    name: "Sam Wilson",
     designation: "Backend Developer",
     location: "Trivandrum",
     salary: "30000",
   },
   {
     id: 2,
-    name: "Hima",
+    name: "Mary Smith",
     designation: "Web Developer",
     location: "Kochi",
     salary: 25000,
   },
   {
     id: 3,
-    name: "Mahi",
+    name: "Peter Jone",
     designation: "Software Developer",
     location: "Trivandrum",
     salary: 40000,
