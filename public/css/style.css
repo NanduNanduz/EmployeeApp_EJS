@@ -4,19 +4,25 @@ body {
     background-size: cover;
 
 }
+.navbar{
+    background-color: rgb(187, 144, 236) !important;
+}
 
 h1{
     color: brown;
 }
 p{
-    background-color: aqua;
+    background-color: rgb(89, 162, 211);
+}
+.card{
+    background-color:rgb(187, 144, 236)  ;
 }
 
 form{
     
     padding: 5%;
-    border: 2px solid rgb(226, 25, 126);
-    background-color: pink;
+    border: 2px solid rgb(34, 14, 56);
+    background-color:rgb(187, 144, 236);
     margin-left: 20%;
     margin-right: 20%;
  
