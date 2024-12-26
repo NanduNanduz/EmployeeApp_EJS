@@ -2,6 +2,8 @@ body {
     background-color: bisque;
     background-image: url('https://img.freepik.com/free-vector/gradient-glassmorphism_23-2149456191.jpg?semt=ais_hybrid');
     background-size: cover;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
 
 }
 .navbar{
