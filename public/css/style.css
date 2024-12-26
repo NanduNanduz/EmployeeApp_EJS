@@ -1,0 +1,25 @@
+body {
+    background-color: bisque;
+    background-image: url('https://img.freepik.com/free-vector/gradient-glassmorphism_23-2149456191.jpg?semt=ais_hybrid');
+    background-size: cover;
+
+}
+
+h1{
+    color: brown;
+}
+p{
+    background-color: aqua;
+}
+
+form{
+    
+    padding: 5%;
+    border: 2px solid rgb(226, 25, 126);
+    background-color: pink;
+    margin-left: 20%;
+    margin-right: 20%;
+ 
+
+}
+
