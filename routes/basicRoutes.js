@@ -52,9 +52,17 @@ function employeeRoutes(nav) {
     res.send(data);
   });
 
-  //Post Operation
+  // //Post Operation
+  // router.post("/add", (req, res) => {
+  //   data.push(req.body);
+  //   res.redirect("/employee");
+  // });
+
+  // Post Operation - Ensure unique IDs for new employees
   router.post("/add", (req, res) => {
-    data.push(req.body);
+    const newId = data.length > 0 ? data[data.length - 1].id + 1 : 1; // Generate a unique ID
+    const newEmployee = { id: newId, ...req.body };
+    data.push(newEmployee);
     res.redirect("/employee");
   });
 
