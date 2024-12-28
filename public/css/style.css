@@ -6,7 +6,8 @@ body {
   font-size: 18px;
 }
 .navbar {
-  background-color: rgb(187, 144, 236) !important;
+  background-color: rgb(172, 190, 248) !important;
+
 }
 
 h1 {
@@ -16,7 +17,7 @@ p {
   background-color: rgb(89, 162, 211);
 }
 .card {
-  background-color: rgb(187, 144, 236);
+  background-color: rgb(206, 173, 241);
 }
 
 form {
