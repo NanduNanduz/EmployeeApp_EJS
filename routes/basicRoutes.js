@@ -30,11 +30,7 @@ var data = [
   },
 ];
 
-
-
-
-function employeeRoutes(nav){
-
+function employeeRoutes(nav) {
   //Rendering home page
   router.get("/", (req, res) => {
     //use render to display in ejs
@@ -45,31 +41,24 @@ function employeeRoutes(nav){
   });
 
   //Rendering employee form page
-  router.get('/form',(req,res)=>{
-    res.render('employeeForm',{
-      nav
+  router.get("/form", (req, res) => {
+    res.render("employeeForm", {
+      nav,
     });
-  })
+  });
 
   //Get Operation
-  router.get('/employees',(req,res)=>{
+  router.get("/employees", (req, res) => {
     res.send(data);
   });
 
   //Post Operation
-  router.post('/add',(req, res)=>{
+  router.post("/add", (req, res) => {
     data.push(req.body);
-    res.redirect('/employee');
+    res.redirect("/employee");
   });
 
-  // //Update Operation
-  // router.put('/edit/:id', (req,res)=>{
-  //   data.splice(req.params.id, 1, req.body);
-  //   res.send(data);
-  // });
-
-
-
+  //Put Operation
   router.put("/edit/:id", (req, res) => {
     const id = parseInt(req.params.id);
     const index = data.findIndex((employee) => employee.id === id);
@@ -82,15 +71,7 @@ function employeeRoutes(nav){
     res.status(200).send(data);
   });
 
-
-  // //Delete Operation
-  // router.delete('/remove/:id', (req, res)=>{
-  //   data.pop();
-  //   res.send(data);
-
-  // })
-
-
+  //Delete Operation
   router.delete("/remove/:id", (req, res) => {
     const id = parseInt(req.params.id);
     const index = data.findIndex((employee) => employee.id === id);
@@ -103,9 +84,7 @@ function employeeRoutes(nav){
     res.status(200).send(data);
   });
 
-
   return router; //for to access all crud operations
 }
-
 
 module.exports = employeeRoutes; // function exported

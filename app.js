@@ -3,7 +3,7 @@ const app = new express(); //instance of express
 
 const ejs = require("ejs"); //import ejs
 
-app.set("view engine", 'ejs'); // set ejs as view engine
+app.set("view engine", "ejs"); // set ejs as view engine
 app.set("views", __dirname + "/views");
 
 const navbar = [
@@ -15,7 +15,6 @@ const basicRoute = require("./routes/basicRoutes")(navbar); // import routes fol
 app.use("/employee", basicRoute);
 
 app.use(express.static("public")); // express use public folder as the root directory for serving static assets.
-
 
 app.listen(3000, () => {
   console.log("Server is running");
